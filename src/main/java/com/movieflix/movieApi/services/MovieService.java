@@ -17,5 +17,7 @@ public interface MovieService {
 
     ResponseListApiDto getAllMovie(String title, String director, Integer page, Integer size, String sortBy, String sortDir);
 
-    MovieDto updateMovieDto(UUID id, MovieDto movieDto, MultipartFile file);
+    ResponseApiDto updateMovieDto(UUID id, MovieDto movieDto, MultipartFile file) throws IOException;
+
+    ResponseApiDto deleteMovie(UUID id) throws IOException;
 }
